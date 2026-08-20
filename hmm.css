@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+  font-family: "DM Sans", sans-serif;
+  background-size: cover;
+  height: 100vh;
+  background-image: linear-gradient(to left,rgba(3, 3, 3, 0.71),rgba(14, 7, 7, 0.769) ),url(https://i.pinimg.com/736x/0e/ac/11/0eac11bc1588f1c765fba359beaa1051.jpg); background-position:top;
+  background-repeat: no-repeat;
+}
+nav{
+    height:fit-content;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+}
+nav div{
+    display: flex;
+    background-color: white;
+    
+  
+}
+nav img{
+    margin-left: 20px;
+    border-radius: 50%;
+
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    padding-left:7rem;
+    gap: 80px;
+    list-style: none;
+    color: white;
+}
+nav div ul li a{
+    list-style: none;
+    text-decoration: none;
+    color: rgba(45, 4, 4, 0.863);
+    justify-content:space-evenly;
+}
+.navlist{ 
+    transition: all ease 0.3s;
+}
+.navlist:hover{
+color: rgb(236, 230, 42);
+cursor: pointer;
+}
+.btn{
+    background-color: rgb(38, 4, 7);
+   color: white;
+   border-radius: 16px;
+   padding: 8px 32px;
+   transition: all ease 0.3s;
+}
+.btn:hover{
+    background-color: rgba(236, 229, 42, 0.402);
+    color: black;
+    cursor: pointer;
+}
+nav h1{
+ margin-left: 100px;
+ text-align: center;
+ color: rgb(20, 6, 6);
+ font-size: 75px;
+ display: flex;
+ padding-top: 120px;
+ justify-content:start;
+}
+.Aboutpage{
+    padding-top: 50px;
+    height:100vh;
+    background:rgba(252, 252, 254, 0.135);
+}
+.maintext{
+    color: white; 
+   margin-left: 90px;
+   margin-top: 120px;
+   font-size: 62px;
+}
+.aboutsection {
+  min-height: 100vh;
+  padding: 80px 10%;
+  background-color: rgb(255, 252, 252);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+
+
+.para {
+  margin: 20px 0 0;
+  line-height: 1.7;
+}
+
+.image {
+  width: 400px;
+  max-width: 100%;
+  border-radius: 30px;
+}
+/* .form{
+    background-color: rgba(3, 3, 3, 0.087);
+    height: 100vh;
+    padding: 30px 30px;
+    align-items: center;
+}
+.regnw{
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+.wrapform{
+    width:90%;
+    background-color: rgba(93, 5, 12, 0.128);
+    display: flex;
+    margin-left: 60px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 32px;
+}
+.btnn{
+    width:300px;
+    height: 50px;
+    border-radius: 8px;
+} */
+.latestdropssection{
+}
+.section{
+    background-color: black;
+    height: 100vh;
+}
+
+.text1{
+   text-align: center;
+   font-size:10px ;
+   font-weight: 200;
+   color: rgb(245, 252, 166);
+  padding-top:30px ;
+}
+.text2{
+color: white;
+font-weight: 100;
+text-align: center;
+padding-top: 10px;
+font-size: 20px;
+
+}
+.images{
+    margin-top: 40px;
+    margin-left: 35px;
+    margin-right: 10px;
+    border-radius: 16px ;
+   
+    
+}
+.type{
+    color: white;
+    font-size: 20px;
+    font-weight: 30;
+   
+}
+.typ1{
+    color: white;
+    font-size: 20px;
+    font-weight: 40;
+}
+.typ2{
+    color: white;
+    font-size: 20px;
+    font-weight: 40;
+}.typ3{
+    color: white;
+    font-size: 20px;
+    font-weight: 40;
+}
+.typ4{
+    color: white;
+    font-size: 20px;
+    font-weight: 40;
+}
+
+.texts{
+    display: flex;
+    
+    padding: 20px 90px;
+    gap: 150px;
+}
+.contactus{
+    height: fit-content;
+    background-color: rgba(254, 250, 250, 0.797);
+}
+.allparts{
+    display: flex;
+   justify-content: space-around;
+ font-size: 10px;
+ text-align: center;
+ padding-top: 40px;
+ padding-bottom: 40px;
+ color: rgb(49, 8, 8);
+}
+.part1{
+  font-weight: 300;  
+  padding-left: 40px;
+}
+.part2{
+     font-weight: 300; 
+}
+.part3{
+    font-weight: 300;  
+}
+/* Put this at the bottom of style.css */
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-10px);
+  }
+
+  75% {
+    transform: translateX(10px);
+  }
+  
+}
+
+.nmn:hover {
+  animation: shake 0.8s ease;
+}
+.nmn{
+     animation: shake 0.4s ease;
+     animation-duration: 2.0s ease;
+}
+.image {
+  transition: transform 0.4s ease;
+}
+
+.image:hover {
+  transform: scale(1.1);
+  scroll-behavior: smooth;
+}
+.images:hover{
+     transform: scale(1.1);
+     scroll-behavior: smooth;
+}
+.nmn

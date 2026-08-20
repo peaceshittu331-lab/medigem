@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 620" role="img" aria-labelledby="title desc">
+  <title id="title">Medigems jewelry logo</title>
+  <desc id="desc">A white and rich brown jewelry logo with a gemstone flower mark and the Medigems wordmark.</desc>
+  <defs>
+    <linearGradient id="brown" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8A5A44"/><stop offset=".48" stop-color="#5A3424"/><stop offset="1" stop-color="#321A12"/></linearGradient>
+  </defs>
+  <rect width="1400" height="620" fill="#FFFFFF"/>
+  <g transform="translate(700 172)" fill="none" stroke="url(#brown)" stroke-width="8" stroke-linejoin="round">
+    <path d="m700 55 64 36-2 74-62 38-62-38-2-74z" transform="translate(-700 -110)"/>
+    <path d="m700 55 0 148M636 91l128 74M764 91l-128 74" transform="translate(-700 -110)"/>
+    <circle cx="0" cy="20" r="17" fill="#6A402E" stroke="none"/>
+  </g>
+  <text x="700" y="385" text-anchor="middle" fill="#4A2A1E" font-family="Georgia, 'Times New Roman', serif" font-size="145" letter-spacing="10">MEDIGEMS</text>
+  <path d="M420 435h560" stroke="#8A5A44" stroke-width="2"/>
+  <text x="700" y="482" text-anchor="middle" fill="#765142" font-family="Arial, Helvetica, sans-serif" font-size="22" letter-spacing="9">TIMELESS JEWELRY</text>
+</svg>
