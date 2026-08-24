@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
 *{
+  
     padding: 0;
     margin: 0;
     padding: 0;
@@ -8,11 +9,15 @@
     scroll-behavior: smooth;
 }
 body{
-  font-family: "DM Sans", sans-serif;
-  background-size: cover;
+  font-family: "Google Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "GRAD" 0;
+  background-size: contain;
   height: 100vh;
   background-image: linear-gradient(to left,rgba(3, 3, 3, 0.71),rgba(14, 7, 7, 0.769) ),url(https://i.pinimg.com/736x/0e/ac/11/0eac11bc1588f1c765fba359beaa1051.jpg); background-position:top;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;  
 }
 nav{
     height:fit-content;
@@ -60,6 +65,7 @@ cursor: pointer;
    border-radius: 16px;
    padding: 8px 32px;
    transition: all ease 0.3s;
+   text-align: center;
 }
 .btn:hover{
     background-color: rgba(236, 229, 42, 0.402);
@@ -83,12 +89,12 @@ nav h1{
 .maintext{
     color: white; 
    margin-left: 90px;
-   margin-top: 120px;
+   margin-top: 220px;
    font-size: 62px;
 }
 .aboutsection {
   min-height: 100vh;
-  padding: 80px 10%;
+  padding: 20px 10%;
   background-color: rgb(255, 252, 252);
   display: flex;
   align-items: center;
@@ -108,32 +114,6 @@ nav h1{
   max-width: 100%;
   border-radius: 30px;
 }
-/* .form{
-    background-color: rgba(3, 3, 3, 0.087);
-    height: 100vh;
-    padding: 30px 30px;
-    align-items: center;
-}
-.regnw{
-    font-size: 36px;
-    display: flex;
-    justify-content: center;
-    padding: 30px;
-}
-.wrapform{
-    width:90%;
-    background-color: rgba(93, 5, 12, 0.128);
-    display: flex;
-    margin-left: 60px;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 32px;
-}
-.btnn{
-    width:300px;
-    height: 50px;
-    border-radius: 8px;
-} */
 .latestdropssection{
 }
 .section{
@@ -219,23 +199,42 @@ font-size: 20px;
 .part3{
     font-weight: 300;  
 }
-/* Put this at the bottom of style.css */
-@keyframes shake {
+@keyframes zoom {
+  from {
+    transform: scale(1);
+    
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.image:hover {
+  animation: zoom 0.4s ease forwards;
+}
+@keyframes pulseWobbleShake {
   0%, 100% {
-    transform: translateX(0);
+    transform: scale(1) translateX(0) rotate(0deg);
   }
 
   25% {
-    transform: translateX(-10px);
+    transform: scale(1.08) translateX(-5px) rotate(-3deg);
+  }
+
+  50% {
+    transform: scale(1.15) translateX(5px) rotate(3deg);
   }
 
   75% {
-    transform: translateX(10px);
+    transform: scale(1.08) translateX(-5px) rotate(-3deg);
   }
-  
 }
 
+
+
 .nmn:hover {
+    color: yellow;
   animation: shake 0.8s ease;
 }
 .nmn{
@@ -254,4 +253,57 @@ font-size: 20px;
      transform: scale(1.1);
      scroll-behavior: smooth;
 }
-.nmn
+.shopnow {
+  animation: pulseWobbleShake 1s ease-in-out infinite;
+  width: fit-content;
+  height: 50px;
+  border-radius: 16px;
+  background-color: rgba(245, 245, 158, 0.925);
+  color: rgb(253, 253, 252);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  border-color: rgb(254, 254, 254);
+  border-style:groove;
+}
+.shopnow img{
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+      
+    }
+.shopnow:hover{
+    color: rgb(11, 4, 4);
+     border-color: rgb(10, 4, 4);
+    border-style:dotted;
+    cursor: pointer;
+     transition: all ease 0.3s;
+}
+
+
+
+
+
+
+
+/* Fade in while scrolling */
+.aboutsection,
+.latestdropssections,
+.contactus {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInScroll 0.8s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 15% cover 35%;
+}
+
+@keyframes fadeInScroll {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

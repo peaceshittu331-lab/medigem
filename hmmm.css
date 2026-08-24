@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -8,131 +8,88 @@
     scroll-behavior: smooth;
 }
 body{
-  .fira-sans-thin {
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 100;
+ font-family: "Google Sans", sans-serif;
+  font-optical-sizing: auto;
   font-style: normal;
-}
-
-.fira-sans-extralight {
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-}
-
-.fira-sans-light {
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.fira-sans-regular {
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.fira-sans-medium {
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.fira-sans-semibold {
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.fira-sans-bold {
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.fira-sans-extrabold {
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 800;
-  font-style: normal;
-}
-
-.fira-sans-black {
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.fira-sans-thin-italic {
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.fira-sans-extralight-italic {
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 200;
-  font-style: italic;
-}
-
-.fira-sans-light-italic {
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.fira-sans-regular-italic {
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.fira-sans-medium-italic {
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.fira-sans-semibold-italic {
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.fira-sans-bold-italic {
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.fira-sans-extrabold-italic {
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 800;
-  font-style: italic;
-}
-
-.fira-sans-black-italic {
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-}
-
+  font-variation-settings:
+    "GRAD" 0;
   background-size: cover;
-  height: 100vh;
+  height: fit-content;
   background-image: linear-gradient(to left,rgba(2, 0, 0, 0.388),rgba(6, 1, 1, 0.68) ),url(https://i.pinimg.com/1200x/62/54/04/6254045b45242f6b8615cdea5c2cce9f.jpg);
    background-position:center;
   background-repeat: no-repeat;
 }
-nav h1{
-    color: rgb(255, 255, 252);
-    text-align: center;
-    padding: 30px 30px;
-    font-size: 50px;
+nav{
+    height:fit-content;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+}
+nav div{
+    display: flex;
+    background-color: white;
+    
+  
+}
+nav img{
+    margin-left: 20px;
+    border-radius: 50%;
+
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    padding-left:7rem;
+    gap: 80px;
+    list-style: none;
+    color: white;
+}
+nav div ul li a{
+    list-style: none;
+    text-decoration: none;
+    color: rgba(45, 4, 4, 0.863);
+    justify-content:space-evenly;
+}
+.navlist{ 
+    transition: all ease 0.3s;
+}
+.navlist:hover{
+color: burlywood;
+height: 10%;
+cursor: pointer;
+}
+.shopnow {
+  animation: pulseWobbleShake 1s ease-in-out infinite;
+  height: 50px;
+  border-radius: 16px;
+  background-color: rgba(62, 232, 46, 0.925);
+  color: rgb(253, 253, 252);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-color: rgb(254, 254, 254);
+  border-style:groove;
+}
+  .shopnow img{
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+      
+    }
+.shopnow:hover{
+    background-color: rgba(236, 229, 42, 0.402);
+    color: black;
+    cursor: pointer;
 }
 .wrapper{
     display: flex;
    flex-direction:row;
-    height: 100vh;
-    position: fixed;
+    height:fit-content;
 }
 .image{
     border-radius: 16px;
@@ -156,10 +113,40 @@ height: 500px;
 padding: 20px;
 }
 .ne{
-    color: rgb(6, 0, 0) ;
+    color: rgb(5, 2, 2) ;
     padding: 10px;
-     font-size: 30px;
+     font-size: 20px;
      font-weight: 700;
-}.me{
-    
+     border-radius: 16px;
+     
+}
+main{
+  padding-top: 90px;
+}
+/* Fade in while scrolling */
+.aboutsection,
+.latestdropssections,
+.contactus {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInScroll 0.8s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 15% cover 35%;
+}
+@keyframes pulseWobbleShake {
+  0%, 100% {
+    transform: scale(1) translateX(0) rotate(0deg);
+  }
+
+  25% {
+    transform: scale(1.08) translateX(-5px) rotate(-3deg);
+  }
+
+  50% {
+    transform: scale(1.15) translateX(5px) rotate(3deg);
+  }
+
+  75% {
+    transform: scale(1.08) translateX(-5px) rotate(-3deg);
+  }
 }
