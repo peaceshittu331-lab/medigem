@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><link
+  rel="stylesheet"
+  href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jewelryweb</title>
@@ -10,28 +13,33 @@
 <link rel="shortcut icon" href="./assets/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png" />
 <link rel="manifest" href="./assets/web-app-manifest-192x192.png" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
   <nav>
     
-   <div>
+   <div class="navsecc">
+    <div class="imgnav">
     <img  src="./medigems-logo.svg" width="100" height="100"/>
+    <img class="harmburger" src="./assets/icons8-menu-48.png"/>
+    </div>
         <ul>
-            <img src="./assets/icons8-menu-48.png"/>
+     
          <li><a class="navlist" href="#">Home</a></li>
          <li><a class="navlist" href="#about">About Us</a></li>
          <li><a  class="navlist" href="#">Gallery</a></li>
-         <li><a  class="navlist" href="#contact">Contact</a></li>
          <li><a  class="navlist"href="#">Latest Drops</a></li>
          <li><a class="navlist" href="#">Our Branches</a></li>
-      <a href="#latestdrop"><button id="shopnoww" class="shopnow"> <img src="./assets/icons8-buy-48.png" alt="like"/></button></a> 
+      <!-- <a href="#latestdrop"><button id="shopnoww" class="shopnowi"><span class="texx">Patronise Us </span></button></a>  -->
         </ul>
         </div>
   </nav>
 
     <main>
    <div>
-<h1 class="maintext">Discover<br>Timeless Beauty <br>in Every Piece</h1><br><br><br><br><br><br>
+    
+<h1  data-aos="fade-left" class="maintext">Discover<br>Timeless Beauty <br>in Every Piece</h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
    </div>
     
     <div id="about" class="aboutsection">
@@ -57,7 +65,7 @@
 
     <a href="./earrrings.html" ><img class="images" src="https://i.pinimg.com/736x/f2/7e/bd/f27ebd17e717d22756c9cf230334655f.jpg" width="200" height="300"/></a>
 
-    <img class="images" src="https://i.pinimg.com/736x/b6/af/90/b6af9050df7bbbb19436161c35443733.jpg" width="200" height="300"/>
+    <a href="./wristwatch.html "><img class="images" src="https://i.pinimg.com/736x/b6/af/90/b6af9050df7bbbb19436161c35443733.jpg" width="200" height="300"/></a>
 
     <img class="images" src="https://i.pinimg.com/1200x/06/22/1c/06221cc9d8d88508f5d1604f5c62e926.jpg" width="200" height="300"/>
    </div>
@@ -83,3 +91,6 @@
 
 </body>
 </html>
+<script>
+  AOS.init();
+</script>

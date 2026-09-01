@@ -25,6 +25,7 @@ nav{
     top: 0;
     right: 0;
     left: 0;
+    z-index: 999;
 
 }
 nav div{
@@ -51,6 +52,7 @@ nav div ul li a{
     text-decoration: none;
     color: rgba(45, 4, 4, 0.863);
     justify-content:space-evenly;
+    font-weight: 700;
 }
 .navlist{ 
     transition: all ease 0.3s;
@@ -73,6 +75,7 @@ cursor: pointer;
   gap: 8px;
   border-color: rgb(254, 254, 254);
   border-style:groove;
+  display: none;
 }
   .shopnow img{
   width: 50px;
@@ -93,12 +96,12 @@ cursor: pointer;
 }
 .image{
     border-radius: 16px;
-    margin-left: 40px;
+    margin-left: 100px;
     margin-top: 40px;
 }
 .secright{
     margin-top: 40px;
-    margin-left: 60px;
+    margin-left: 460px;
 }
 .secright p{   
 line-height: 1.7;
@@ -120,18 +123,29 @@ padding: 20px;
      border-radius: 16px;
      
 }
+.images1{
+  margin-left: 120px;
+  margin-top: 50px;
+  border-radius: 24px;
+}
 main{
   padding-top: 90px;
 }
-/* Fade in while scrolling */
-.aboutsection,
-.latestdropssections,
-.contactus {
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeInScroll 0.8s ease-out forwards;
-  animation-timeline: view();
-  animation-range: entry 15% cover 35%;
+.secleft img{
+  width: 80%;
+  position: relative;
+}
+.secright{
+
+}
+.anth{
+
+}
+.wrapper{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 @keyframes pulseWobbleShake {
   0%, 100% {
@@ -148,5 +162,31 @@ main{
 
   75% {
     transform: scale(1.08) translateX(-5px) rotate(-3deg);
+  }
+}
+@media screen and (max-width:640px){
+
+  body{
+    background-image: none;
+  }
+
+  nav ul{
+    display: none;
+    overflow-x: hidden;
+  }
+
+  .secleft{
+    width: 100vw;
+  }
+  .images1{
+    padding-left: 0;
+    margin-left: 40px;
+  }
+  .secright{
+    padding-left: 0;
+    margin-left: 20px;
+  }
+  .image{
+   margin-left: 70px;
   }
 }

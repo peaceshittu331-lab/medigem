@@ -8,6 +8,7 @@
 }
 
 body {
+  width: 100%;
   font-family: "Ubuntu", sans-serif;
   min-height: 100vh;
   background-image:
@@ -25,14 +26,17 @@ nav {
   top: 0;
   left: 0;
   right: 0;
+  display: flex;
+  align-items: center;
+  gap: 200px;
 }
 
 nav div {
   height: 100px;
   display: flex;
-  align-items: center;
+  align-items: end;
   justify-content: center;
-  gap: 100px;
+  gap:400px;
   padding: 10px 20px;
 }
 
@@ -44,6 +48,7 @@ nav div img {
 nav ul {
   display: flex;
   align-items: center;
+  justify-content: end;
   gap: 40px;
   list-style: none;
 }
@@ -51,6 +56,7 @@ nav ul {
 nav div ul li a {
   text-decoration: none;
   color: rgba(45, 4, 4, 0.863);
+  font-size: 14px;
 }
 
 .navlist {
@@ -65,6 +71,7 @@ nav div ul li a {
 .shopnow {
   width: 50px;
   height: 45px;
+  margin-right: 50px;
   border: none;
   border-radius: 12px;
   background-color: rgba(54, 3, 3, 0.822);
@@ -77,7 +84,7 @@ nav div ul li a {
 }
 
 .products {
-     width: 80%;
+     width: 100%;
   margin: 50px;
   padding:  20px 50px;
   display: flex;
@@ -129,8 +136,28 @@ nav div ul li a {
   font-weight: 700;
   cursor: pointer;
 }
+@media (max-width: 1280px){
+  body{
+    width: 100%;
+  }
+  .products{
+    align-items: center;
+  }
+  .product{
+    margin-right: 300px;
+  }
+ .shopnow{
+  display: none;
+ } 
+ nav a{
+  font-weight: 700;
+ }
+ nav ul{
+  margin-bottom: 30px;
+ }
+}
 
-@media (max-width: 850px) {
+@media (max-width: 768px) {
   nav  div {
     flex-direction: column;
   }
@@ -138,16 +165,32 @@ nav div ul li a {
    nav ul {
     display: none;
   }
-}
+  .products{
 
-@media (max-width: 600px) {
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+}
+@media (max-width: 640px) {
   .products {
-    flex: 1;
     padding:  16px ;
-    margin: 0;
+    margin-left: 150px;
+  }
+  body{
+    overflow-x: hidden;
+  }
+  .product{
+    width: auto;
   }
  
   .images {
+    padding-right: 0;
+    margin-right: 0;
+  
+    width: 100vw;
     height: 400px;
   }
 
