@@ -16,47 +16,53 @@ body {
     url("https://i.pinimg.com/736x/73/bc/b0/73bcb03da9e33c16b28688f69260761a.jpg");
   background-size: cover;
   background-position: center;
-
+  background-attachment: fixed;
 }
 
+/* ---------- NAV ---------- */
 nav {
   width: 100%;
   background-color: white;
-  position: relative;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
-  display: flex;
-  align-items: center;
-  gap: 200px;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
-nav div {
-  height: 100px;
+nav > div {
   display: flex;
-  align-items: end;
-  justify-content: center;
-  gap:400px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
   padding: 10px 20px;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 nav div img {
-  margin-left: 20px;
   border-radius: 16px;
+  width: clamp(60px, 8vw, 100px);
+  height: auto;
 }
 
 nav ul {
   display: flex;
   align-items: center;
-  justify-content: end;
-  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: clamp(12px, 2.5vw, 40px);
   list-style: none;
+  flex: 1;
 }
 
 nav div ul li a {
   text-decoration: none;
   color: rgba(45, 4, 4, 0.863);
   font-size: 14px;
+  white-space: nowrap;
 }
 
 .navlist {
@@ -68,10 +74,16 @@ nav div ul li a {
   cursor: pointer;
 }
 
+.lia {
+  font-weight: 700;
+}
+
 .shopnow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 50px;
   height: 45px;
-  margin-right: 50px;
   border: none;
   border-radius: 12px;
   background-color: rgba(54, 3, 3, 0.822);
@@ -83,35 +95,36 @@ nav div ul li a {
   height: 25px;
 }
 
+/* ---------- PRODUCT GRID (rings/necklace/etc pages) ---------- */
 .products {
-     width: 100%;
-  margin: 50px;
-  padding:  20px 50px;
-  display: flex;
-  margin-left: 150px;
-  flex-direction: column;
-  align-items: center;
-  gap: 50px;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  place-items: center;
 }
 
 .product {
-     width: 80%;
+  width: 100%;
+  max-width: 500px;
   position: relative;
-    overflow: hidden;
+  overflow: hidden;
   border-radius: 24px;
- 
 }
 
 .images {
   width: 100%;
-  height: 450px;
+  aspect-ratio: 3 / 4;
+  height: auto;
   display: block;
   object-fit: cover;
   border-radius: 24px;
-   gap: 50px;
 }
 
-.infoA,.infoB,.infoC,.infoD {
+.infoA, .infoB, .infoC, .infoD {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -121,11 +134,15 @@ nav div ul li a {
   color: white;
   text-align: center;
   background-color: rgba(3, 3, 3, 0.6);
-   gap: 50px;
 }
 
-.infoA button,.infoB button,.infoC button,.infoD button {
-  width: 200px;
+.infoA h3, .infoB h4, .infoC h4, .infoD h4 {
+  font-size: clamp(14px, 2vw, 18px);
+}
+
+.infoA button, .infoB button, .infoC button, .infoD button {
+  width: 100%;
+  max-width: 200px;
   height: 48px;
   margin-top: 12px;
   border: none;
@@ -136,65 +153,158 @@ nav div ul li a {
   font-weight: 700;
   cursor: pointer;
 }
-@media (max-width: 1280px){
-  body{
-    width: 100%;
+
+/* ---------- GALLERY CARDS ---------- */
+.up h1 {
+  margin: 50px 0;
+  text-align: center;
+  color: rgb(69, 8, 14);
+  padding: 0 20px;
+}
+
+.up {
+  margin-top: 50px;
+}
+
+.gallerycard {
+  background-color: rgba(0, 0, 0, 0.128);
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 24px;
+  gap: 10px;
+  justify-content: center;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+.glasecleft {
+  flex: 1 1 320px;
+}
+
+.glasecleft img {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 24px;
+  display: block;
+}
+
+.glascright {
+  flex: 1 1 320px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.h2k {
+  text-align: center;
+  font-size: clamp(16px, 2vw, 22px);
+  font-weight: 500;
+  margin: 20px 0 30px;
+}
+
+.glasecleft .h2k {
+  margin-right: 0;
+}
+
+.naira {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.btn1, .btn2 {
+  text-align: center;
+  font: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  height: 50px;
+  width: 130px;
+  border-radius: 16px;
+  margin: 0 5px 10px;
+}
+
+.btn1 {
+  color: white;
+  background-color: rgb(30, 5, 5);
+  border: solid 3px white;
+}
+
+.btn1:hover {
+  background-color: rgba(0, 0, 0, 0.361);
+}
+
+.btn2 {
+  color: rgb(49, 10, 10);
+  background-color: rgb(253, 249, 249);
+  border: solid 3px rgb(51, 10, 10);
+}
+
+.btn2:hover {
+  background-color: rgba(252, 249, 249, 0.361);
+}
+
+/* ---------- BREAKPOINTS ---------- */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  nav ul {
+    justify-content: center;
   }
-  .products{
+  .glascright {
+    text-align: center;
+  }
+  .h2k {
+    margin-right: 0 !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  nav > div {
+    flex-direction: column;
     align-items: center;
   }
-  .product{
-    margin-right: 300px;
-  }
- .shopnow{
-  display: none;
- } 
- nav a{
-  font-weight: 700;
- }
- nav ul{
-  margin-bottom: 30px;
- }
-}
-
-@media (max-width: 768px) {
-  nav  div {
-    flex-direction: column;
-  }
-
-   nav ul {
-    display: none;
-  }
-  .products{
-
-    margin-left: 0;
-    margin-right: 0;
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-}
-@media (max-width: 640px) {
-  .products {
-    padding:  16px ;
-    margin-left: 150px;
-  }
-  body{
-    overflow-x: hidden;
-  }
-  .product{
-    width: auto;
-  }
- 
-  .images {
-    padding-right: 0;
-    margin-right: 0;
-  
-    width: 100vw;
-    height: 400px;
-  }
-
   nav ul {
-    display: none;
+    gap: 14px;
+    justify-content: center;
+  }
+  nav div ul li a {
+    font-size: 13px;
+  }
+  .products {
+    grid-template-columns: 1fr;
+    padding: 20px 16px;
+  }
+  .gallerycard {
+    width: 100%;
+    border-radius: 16px;
+  }
+  .glasecleft img {
+    min-height: 260px;
+    border-radius: 16px 16px 0 0;
+  }
+  .glascright {
+    padding: 16px;
+  }
+  .btn1, .btn2 {
+    width: 100%;
+    max-width: 260px;
+    margin: 0 0 10px;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1440px) {
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 60px;
+  }
+  .gallerycard {
+    max-width: 1400px;
   }
 }
